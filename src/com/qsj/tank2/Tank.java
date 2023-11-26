@@ -5,7 +5,7 @@ public class Tank {
     private int y = 0;
     private int speed = 1;
     private int direct = 3;
-
+    boolean isLive = true;
     public void moveUp(){
         y -= speed;
     }
@@ -54,6 +54,14 @@ public class Tank {
 
     public int getY() {
         return y;
+    }
+
+    public boolean isLive() {
+        return isLive;
+    }
+
+    public void setLive(boolean live) {
+        isLive = live;
     }
 
     public void setY(int y) {

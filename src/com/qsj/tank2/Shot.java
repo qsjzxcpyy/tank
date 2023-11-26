@@ -30,6 +30,10 @@ public class Shot implements Runnable {
         return y;
     }
 
+    public void setLive(boolean live) {
+        this.live = live;
+    }
+
     public void setY(int y) {
         this.y = y;
     }
