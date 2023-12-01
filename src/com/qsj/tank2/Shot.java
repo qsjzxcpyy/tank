@@ -4,7 +4,7 @@ public class Shot implements Runnable {
     private int x;
     private int y;
     private int direct = 1;
-    private int speed = 1;
+    private int speed = 5;
     private boolean live = true;
 
 

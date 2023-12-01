@@ -12,6 +12,11 @@ public class Hero  extends Tank {
 
     }
 
+    public Hero(int x, int y, int direct, Vector<Shot> heroshots) {
+        super(x, y, direct);
+        this.heroshots = heroshots;
+    }
+
     public boolean isLive() {
         return isLive;
     }
@@ -19,6 +24,7 @@ public class Hero  extends Tank {
     public void setLive(boolean live) {
         isLive = live;
     }
+
 
     public void shotEnemy(){
         switch(getDirect()) {
@@ -37,7 +43,7 @@ public class Hero  extends Tank {
             default:
                 System.out.println("子弹方向有误");
         }
-        shot.setSpeed(3);
+        shot.setSpeed(5);
         new Thread(shot).start();
         heroshots.add(shot);
 

@@ -44,6 +44,12 @@ public class Tank {
         this.y = y;
     }
 
+    public Tank(int x, int y, int direct) {
+        this.x = x;
+        this.y = y;
+        this.direct = direct;
+    }
+
     public int getX() {
         return x;
     }
