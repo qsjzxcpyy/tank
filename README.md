@@ -7,9 +7,11 @@
 
 #### 功能
 
-- 可以开始游戏可以选择 **1** 开始新游戏游戏  **2** 继续上局游戏
+- **可以开始游戏可以选择  1  开始新游戏游戏  2  继续上局游戏**
 
-#### Eclipse坦克大战玩法前提
+#### Eclipse坦克大战玩法前提（idea直接可以玩）
+
+- **修改的代码文件是MyPanel.java , MyPanel 方法**
 
 ![QQ截图20231201141402](https://cdn.jsdelivr.net/gh/qsjzxcpyy/my_img@master/QQ%E6%88%AA%E5%9B%BE20231201141402.png)
 
