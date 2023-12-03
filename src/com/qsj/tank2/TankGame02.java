@@ -25,8 +25,10 @@ public class TankGame02 extends JFrame {
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                Record.storeEnemyDt();
-                Record.storeHeroDt();
+              if(MyPanel.res) {
+                  Record.storeEnemyDt();
+                  Record.storeHeroDt();
+              }
                 System.exit(0);
             }
         });

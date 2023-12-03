@@ -9,7 +9,7 @@ import java.util.Vector;
 
 public class MyPanel extends Panel implements KeyListener , Runnable{
 
-    boolean res = true;
+    static boolean res = true;
     Image image1 = null;
     Image image2 = null;
     Image image3 = null;
@@ -24,7 +24,8 @@ public class MyPanel extends Panel implements KeyListener , Runnable{
    Vector<String[]> enemyDt = null;
    Vector<String[]> heroDt = null;
     Vector<Bomb> bombs = new Vector<>();
-
+  String recordEyFile = "src\\myEnemyRecord.txt";
+   String recordHeroFile = "src\\myHeroRecord.txt";
     public MyPanel(String key) {
 
         File file = new File(Record.recordEyFile);
@@ -133,6 +134,15 @@ public class MyPanel extends Panel implements KeyListener , Runnable{
         else{
 
             g.drawImage(image4,250,187,500,370,this);
+
+            File file = new File(recordEyFile);
+            if(file.exists()){
+                file.delete();
+            }
+            File file1 = new File(recordHeroFile);
+            if(file1.exists()){
+                file1.delete();
+            }
             res = false;
         }
 
@@ -171,6 +181,14 @@ public class MyPanel extends Panel implements KeyListener , Runnable{
         }
         else {
             g.drawImage(image5,250,187,500,370,this);
+            File file = new File(recordEyFile);
+            if(file.exists()){
+                file.delete();
+            }
+            File file1 = new File(recordHeroFile);
+            if(file1.exists()){
+                file1.delete();
+            }
             res = false;
         }
         for(int i = 0; i < bombs.size(); i ++){
